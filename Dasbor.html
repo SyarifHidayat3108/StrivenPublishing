@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard</title>
+</head>
+
+    <body style="background: #ebe7e7;">
+        <div id="resellerCompanyID" style="display: none;">134</div>
+        <input type="hidden" id="resel_lang" value="en">
+        <nav class="navbar ds menu-dop bor-radius mb0 bor-radius">
+      
+          <div class="container-fluid">
+      
+            <div class="navbar-header">
+      
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+      
+                <span class="sr-only">Toggle navigation</span>
+      
+                <span class="icon-bar"></span>
+      
+                <span class="icon-bar"></span>
+      
+                <span class="icon-bar"></span>
+      
+              </button>
+      
+              <a class="navbar-brand absolute-position" href="https://rilis.distrowave.com/dashboard.php" id="home_link" onclick="updateLink('home_link', 'true')"><img src="https://rilis.distrowave.com/myhq/uploads/RtI59v7ljXR43lX2hAIDvWnsn.png" alt="distrowave Logo" style="max-width:225px !important;min-width:90px !important;max-height:80px !important "></a>
+              <div class="cloud-under-logo1 hidden-sm hidden-xs"></div>
+      
+            </div>
+      
+                    <div id="navbar1" class="navbar-collapse collapse">
+      
+                <ul class="nav navbar-nav ml200 mbi-zero">
+      
+                  <li class="active" style="z-index: 7;">
+      
+                    <a href="dashboard.php" title="Dashboard" id="dashboard_link" onclick="updateLink('dashboard_link', 'true')"><i class="fa fa-th-large" title="Dashboard" aria-hidden="true"></i><span class="sr-only">Dashboard</span> <span>Dashboard</span></a>
+      
+                  </li>
+      
+                  <li class="dropdown my-new-menu">
+      
+                    <a href="create_new_release.php?id=new&amp;step=create_new" title="" id="create_link" onclick="updateLink('create_link', 'false')"><i class="fa fa-plus" title="Music" aria-hidden="true"></i><span class="sr-only">Music</span> <span>New Release</span></a>
+                  </li>
+      
+                  <li class="my-music">
+      
+                    <a href="catalogue.php" title="View all my music" id="cat_link" onclick="updateLink('cat_link', 'true')"><i class="fa fa-music" title="Music" aria-hidden="true"></i><span class="sr-only">Music</span> <span>My Catalogue</span></a>
+      
+                  </li>
+      
+      
+      
+                  <li class="dropdown my-sales">
+      
+                    <a href="#" title="View my sales and trends" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bar-chart" title="Sales" aria-hidden="true"></i><span class="sr-only">Sales</span> <span>Sales <b class="caret"></b></span> </a>
+      
+                    <ul class="dropdown-menu mysales_toggle">
+      
+                      <li class="sales-royalties">
+      
+                        <a href="#" title="View the royalties I've earned" onclick="my_analytics_payout();"><i class="fa fa-pie-chart" title="Royalties charts" aria-hidden="true"></i><span class="sr-only">Royalties charts</span> <span>Royalty earnings</span></a>
+      
+                      </li>
+      
+                      <li class="sales-trends">
+      
+                        <a href="#" title="View my streaming analytics" onclick="my_analytics();"><i class="fa fa-line-chart" title="Sales trends" aria-hidden="true"></i><span class="sr-only">Sales trends</span> <span> Sales trends</span></a>
+      
+                      </li>
+      
+                      
+                    </ul>
+      
+                  </li>
+                  
+                    <li class="dropdown custom-menu">
+      
+                      <a href="#" title="custom-menu" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-link" title="Sales" aria-hidden="true"></i><span class="sr-only">Sales</span> <span>Others <b class="caret"></b></span> </a>
+      
+                      <ul class="dropdown-menu custom_toggle">
+                                            <li class="account-settings">
+                            <a href="https://www.distrowave.com/shop" target="_blank">
+                              <i class="fa fa-arrow-circle-right" title="subscriptions calendar" aria-hidden="true"></i><span class="sr-only">subscriptions calendar</span> <span>Buy Voucher</span>
+                            </a>
+                          </li>
+                                            <li class="account-settings">
+                            <a href="https://youtube.com/playlist?list=PLqLGNeRxkR1xGlSSomy1tQaGTEoxMs_mn" target="_blank">
+                              <i class="fa fa-arrow-circle-right" title="subscriptions calendar" aria-hidden="true"></i><span class="sr-only">subscriptions calendar</span> <span>Tutorial (YouTube)</span>
+                            </a>
+                          </li>
+                                            <li class="account-settings">
+                            <a href="https://www.distrowave.com/blog" target="_blank">
+                              <i class="fa fa-arrow-circle-right" title="subscriptions calendar" aria-hidden="true"></i><span class="sr-only">subscriptions calendar</span> <span>Tutorial (Website)</span>
+                            </a>
+                          </li>
+                                        </ul>
+      
+                    </li>
+                            </ul>
+      
+      
+      
+                <ul class="nav navbar-nav navbar-right">
+      
+                  <li class="dropdown my-account padding-left18">
+      
+                    <a href="#" class="dropdown-toggle parent-link" id="heading-dropdown" data-toggle="dropdown">
+      
+                      <i class="fa fa-user" aria-hidden="true"></i> <span>Account <b class="caret"></b></span>
+      
+                    </a>
+      
+                    <ul class="dropdown-menu myacount_toggle">
+      
+                      <li class="account-settings">
+      
+                        <a href="account_setting.php" title="See my account" id="account_settings_link" onclick="updateLink('account_settings_link', 'true')">
+      
+                          <i class="fa fa-user" title="subscriptions calendar" aria-hidden="true"></i><span class="sr-only">subscriptions calendar</span> <span> Account Setting</span>
+      
+                        </a>
+      
+                      </li>
+      
+                      <li class="account-history">
+      
+                        <a href="payout.php" title="My payout details" id="payout_link" onclick="updateLink('payout_link', 'true')"><i class="fa fa-credit-card" title="add new" aria-hidden="true"></i><span class="sr-only">add new</span> <span>Payout</span>
+      
+                        </a>
+      
+                      </li>
+      
+      
+                      <li class="account-password">
+      
+                        <a href="order-history.php" title="View all Order history" id="order_link" onclick="updateLink('order_link', 'true')"><i class="fa fa-history" title="password" aria-hidden="true"></i><span class="sr-only">password</span> <span>Order History</span>
+                        </a>
+      
+                      </li>
+      
+                                        <li class="account-discovery">
+      
+                          <a href="spotify_discovery.php" title="View Discovery Mode"><i class="fa fa-spotify" title="Discovery Mode" aria-hidden="true"></i><span class="sr-only">Discovery Mode</span> <span>Discovery Mode</span>
+      
+                          </a>
+      
+                        </li>
+                      
+                                      <li class="account-contact">
+                        <a href="contact-us.php" title="">
+                          <i class="fa fa-envelope" title="subscriptions calendar" aria-hidden="true"></i><span class="sr-only">subscriptions calendar</span> <span>Contact Us</span>
+                        </a>
+                      </li>
+      
+      
+                      <li class="account-logout">
+      
+                        <a href="logout.php" title="Change my password"><i class="fa fa-sign-out" title="sign out" aria-hidden="true"></i><span class="sr-only">sign out</span> <span>Log out</span></a>
+      
+                      </li>
+      
+                    </ul>
+      
+                  </li>
+      
+                  <!--                   
+                  NOTE WHEN REMOVING LANGUAGES - A HARD CODED LOOP WITHIN THE TRANSLATE FUNCTION SKIPS OVER 'x' HTML ELEMENTS
+                  WHEN "Afrikaans" IS ENCOUNTERED. 
+                  Removeing Afrikaans will cause all languages to be translated and removing languages will mean 'x' has to
+                  be changed within the loop. x = #languages + 2
+                  -->
+                  <li class="dropdown my-account padding-left18">
+                    <a href="#" class="dropdown-toggle parent-link" id="lang-heading-dropdown" data-toggle="dropdown" onclick="language_toggle()">
+                      <span>EN<b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu language_toggle" style="text-align: center; max-height:400px; overflow: auto;">
+                      <button type="button" onclick="update_html('af')" class="lbutton">Afrikaans</button>
+                      <button type="button" onclick="update_html('ar')" class="lbutton">Arabic</button>
+                      <!-- <button type="button" onClick="update_html('bn')" class="lbutton">Bangla</button>
+                        <button type="button" onClick="update_html('bs')" class="lbutton">Bosnian (Latin)</button>
+                        <button type="button" onClick="update_html('bg')" class="lbutton">Bulgarian</button> -->
+                      <!-- <button type="button" onClick="update_html('ca')" class="lbutton">Catalan</button> -->
+                      <button type="button" onclick="update_html('zh-Hans')" class="lbutton">Chinese Simplified</button>
+                      <button type="button" onclick="update_html('hr')" class="lbutton">Croatian</button>
+                      <!-- <button type="button" onClick="update_html('cs')" class="lbutton">Czech</button> -->
+                      <button type="button" onclick="update_html('da')" class="lbutton">Danish</button>
+                      <button type="button" onclick="update_html('nl')" class="lbutton">Dutch</button>
+                      <button type="button" onclick="update_html('en')" class="lbutton">English</button>
+                      <button type="button" onclick="update_html('fi')" class="lbutton">Finnish</button>
+                      <button type="button" onclick="update_html('fr')" class="lbutton">French</button>
+                      <button type="button" onclick="update_html('de')" class="lbutton">German</button>
+                      <button type="button" onclick="update_html('el')" class="lbutton">Greek</button>
+                      <!-- <button type="button" onClick="update_html('ht')" class="lbutton">Haitian Creole</button> -->
+                      <button type="button" onclick="update_html('he')" class="lbutton">Hebrew</button>
+                      <button type="button" onclick="update_html('hi')" class="lbutton">Hindi</button>
+                      <!-- <button type="button" onClick="update_html('mww')" class="lbutton">Hmong Daw</button>
+                        <button type="button" onClick="update_html('hu')" class="lbutton">Hungarian</button>
+                        <button type="button" onClick="update_html('is')" class="lbutton">Icelandic</button> -->
+                      <button type="button" onclick="update_html('id')" class="lbutton">Indonesian</button>
+                      <button type="button" onclick="update_html('it')" class="lbutton">Italian</button>
+                      <button type="button" onclick="update_html('ja')" class="lbutton">Japanese</button>
+                      <button type="button" onclick="update_html('ko')" class="lbutton">Korean</button>
+                      <!-- <button type="button" onClick="update_html('lv')" class="lbutton">Latvian</button>
+                        <button type="button" onClick="update_html('lt')" class="lbutton">Lithuanian</button>
+                        <button type="button" onClick="update_html('ms')" class="lbutton">Malay</button>
+                        <button type="button" onClick="update_html('mt')" class="lbutton">Maltese</button> -->
+                      <button type="button" onclick="update_html('nb')" class="lbutton">Norwegian</button>
+                      <!-- <button type="button" onClick="update_html('fa')" class="lbutton">Persian</button>
+                        <button type="button" onClick="update_html('pl')" class="lbutton">Polish</button> -->
+                      <button type="button" onclick="update_html('pt')" class="lbutton">Portuguese (Brazil)</button>
+                      <button id="PortugueseTarget" type="button" onclick="update_html('pt-pt')" class="lbutton">Portuguese (Portugal)</button>
+                      <!-- <button type="button" onClick="update_html('ro')" class="lbutton">Romanian</button> -->
+                      <button type="button" onclick="update_html('ru')" class="lbutton">Russian</button>
+                      <!-- <button type="button" onClick="update_html('sr-Latn')" class="lbutton">Serbian (Latin)</button>
+                        <button type="button" onClick="update_html('sk')" class="lbutton">Slovak</button>
+                        <button type="button" onClick="update_html('sl')" class="lbutton">Slovenian</button> -->
+                      <button type="button" onclick="update_html('es')" class="lbutton">Spanish</button>
+                      <button type="button" onclick="update_html('sw')" class="lbutton">Swahili</button>
+                      <button type="button" onclick="update_html('sv')" class="lbutton">Swedish</button>
+                      <!-- <button type="button" onClick="update_html('ta')" class="lbutton">Tamil</button> -->
+                      <button type="button" onclick="update_html('th')" class="lbutton">Thai</button>
+                      <button type="button" onclick="update_html('tr')" class="lbutton">Turkish</button>
+                      <!-- <button type="button" onClick="update_html('uk')" class="lbutton">Ukrainian</button>
+                        <button type="button" onClick="update_html('ur')" class="lbutton">Urdu</button> -->
+                      <button type="button" onclick="update_html('vi')" class="lbutton">Vietnamese</button>
+                      <!-- <button type="button" onClick="update_html('cy')" class="lbutton">Welsh</button> -->
+                    </ul>
+                  </li>
+                </ul>
+      
+              </div>
+      
+      
+      
+            
+          </div>
+      
+      
+        </nav>
+      
+        <div class="modal fade" id="add_account_subscription" style="z-index: 5;">
+          <div class="modal-dialog ">
+            <form method="POST" action="account_subscription/create-checkout.php">
+              <div class="modal-content popup-bg">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+                  <h4 class="modal-title chg-pssd" style=" display: inline-block; margin-left: 14px;" id="title_modalpopup">
+                    Subscribe for Unlimited Releases</h4>
+                </div>
+      
+                
+                <div class="modal-body" style="height: auto; overflow: auto;">
+                  <h5 class="modal-title chg-pssd" id="annual_sub_heading" style="margin-left: 14px;">Annual subscription for  IDR per year</h5>
+                  <input type="hidden" name="ac_sub_old_amount" id="ac_sub_old_amount" value="">
+                  <input type="hidden" name="encrypted_user_no" value="NTZSb3hUVFFSSUtSdXF4cmRCWE5QQT09">
+                  <div class="col-md-12 validationnew_main_artists" style="color:#F00;" align="center"></div>
+      
+                  <ul id="annual_sub_points">
+                    <li class="chg-pssd">Free UPC and ISRC Codes (or use your own)</li>
+                    <li class="chg-pssd">Schedule Release Dates</li>
+                    <li class="chg-pssd">Custom Label Name</li>
+                    <li class="chg-pssd">Daily Trend Analytics</li>
+                    <li class="chg-pssd">Split Royalty Payments to Collaborators</li>
+                    <li class="chg-pssd">Set Country Restrictions and Territorial Rights</li>
+                    <li class="chg-pssd">Maximum  Artists per account, upgrade your subscription to add more artists.</li>
+                  </ul>
+      
+                  <div class="col-md-12 mt0 mb0" id="annual_price_heading">
+                    <div class="col-md-12 mt0 mb0 pb10 pt10 bg-payot">
+                      <h5 class="mb10 chg-pssd"> </h5>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-12 mb0 chg-pssd update_sub">
+                    <h6 style="margin-bottom: 0px;">Select Number of Artists Required</h6>
+                  </div>
+      
+                  <div class="col-md-6 mb0 update_sub">
+                    <div class="form-group mb0">
+                      <select class="form-control help" id="artist_qty" name="artist_qty" onchange="CalcPrice()">
+                        <!-- <option value="">Select Number of Artists Required</option> -->
+      
+                        <option value="1" selected="">0</option><option value="2">0</option><option value="3">0</option><option value="4">0</option><option value="5">0</option><option value="6">0</option><option value="7">0</option><option value="8">0</option><option value="9">0</option><option value="10">0</option><option value="11">0</option><option value="12">0</option><option value="13">0</option><option value="14">0</option><option value="15">0</option><option value="16">0</option><option value="17">0</option><option value="18">0</option><option value="19">0</option><option value="20">0</option><option value="21">0</option><option value="22">0</option><option value="23">0</option><option value="24">0</option><option value="25">0</option>
+                      </select>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-12 mt0 mb0" style="margin-left: -13px;">
+      
+                    <div class="show-hide" id="ac_sub_price_id_1">
+                      <!-- <div class="col-md-12 mt20 mb0 chg-pssd">
+                                  Rp                         </div> -->
+      
+                      <div class="col-md-4 total1_div">
+                        <div class="font-totol chg-pssd mt10" id="total1_lbl1"> Total</div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="font-totol chg-pssd total1 mt10">Rp 0.00</div>
+                      </div>
+                      <div class="col-md-12" id="total1_lbl3">
+                        <div class="chg-pssd mb10"> On successful upgrade you will only be charged for the remainder of your current subscription at the pro-rata amount </div>
+                      </div>
+      
+                    </div>
+      
+                    <div class="show-hide" id="ac_sub_price_id_2" style="display:none;">
+                      <!-- <div class="col-md-12 mt20 mb0 chg-pssd">
+                                  Rp<span id="CalculateOldPriceExtrax"></span>
+                              </div> -->
+                      <div class="col-md-4">
+                        <div class="font-totol chg-pssd"> Total</div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="font-totol chg-pssd"> Rp<span id="ac_sub_new_pricedExt"></span></div>
+                      </div>
+                    </div>
+      
+                    <div class="show-hide" id="ac_sub_price_id_3" style="display:none;">
+                      <div class="col-md-12 mb0 chg-pssd"> Old price
+                        Rp<span id="ac_sub_CalculateOldPricePromo"></span>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="font-totol chg-pssd"> Discounted price</div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="font-totol chg-pssd"> Rp<span id="ac_sub_new_price"></span></div>
+                      </div>
+                    </div>
+      
+                  </div>
+      
+      
+                  <div class="col-md-4 mb0 promo_div">
+                    <input type="text" name="ac_sub_promo_code" placeholder="Add Coupon Code" class="  form-control" id="ac_sub_promo_code" maxlength="100">
+                  </div>
+                  <div class="col-md-4 promo_div">
+                    <button type="button" id="apply_ac_sub_promo" class="theme_button color1 mb0" onclick="ac_sub_promo_code_button_toggle_off();">Apply</button>
+                  </div>
+      
+                  <div class="col-md-12 mb0 promo_div">
+                    <h6 id="promo_code_err"></h6>
+                  </div>
+      
+                  
+                  <div class="col-md-6 mb0">
+                    <input type="hidden" id="subscription_type">
+                    <button type="submit" class="theme_button color1">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+      
+        <script type="text/javascript">
+          function my_analytics1() {
+            tr_alert("There is no data available. You need at least 1 delivered album in your catalogue to access streaming analytics.");
+          }
+      
+          function my_analytics() {
+                    window.location.href = "my_analytics.php";
+                }
+      
+          function my_analytics_payout1() {
+            //alert("You do not have any delivered albums on the app stores.");
+            window.location.href = "payout.php?response=6";
+          }
+      
+          function my_analytics_payout() {
+                    window.location.href = "payout.php";
+                }
+      
+          /*****To ignore special characters*********/
+          function isValidCharacter(event) {
+            var keycode;
+            keycode = event.keyCode ? event.keyCode : event.which;
+            if ((keycode == 32 || keycode == 8 || keycode == 39 || keycode == 44 || keycode == 46) || (keycode >= 48 && keycode <= 57) || (keycode >= 65 && keycode <= 90) || (keycode >= 97 && keycode <= 122)) {
+              return true;
+            } else {
+              return false;
+            }
+            return true;
+          }
+        </script>
+      
+        <script>
+          // function myacount_toggle() {
+          //   $('.dropdown-menu').css('display', 'none');
+          //   $(".myacount_toggle").toggle();
+          // }
+      
+          // function mysales_toggle() {
+          //   $('.dropdown-menu').css('display', 'none');
+          //   $(".mysales_toggle").toggle();
+          // }
+      
+          // function custom_toggle() {
+          //   $(".custom_toggle").toggle();
+          // }
+      
+          // function language_toggle() {
+          // // $(".language_toggle").toggle();
+          // }
+      
+          // $('.dropdown-toggle').click(function(){
+          //   $('.dropdown-menu').css('display', 'none');
+          //   $(this).next('.dropdown-menu').toggle();
+          // });
+      
+          // $(document).click(function(e) {
+          //   var target = e.target;
+          //   if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) {
+          //     $('.dropdown-menu').hide();
+          //   }
+          // });
+        </script>
+      
+      
+        <script>
+          var tr_error = "";
+          var default_error_messages = "<p>Please enter main artist name</p>" +
+            "<p>Please enter release date</p>" +
+            "<p>Please enter language</p>" +
+            "<p>Please enter primary genre</p>" +
+            "<p>Please enter secondary genre</p>" +
+            "<p>Artwork is mandatory</p>" +
+            "<p>Please enter UPC code</p>" +
+            "<p>UPC code must be numeric only</p>" +
+            "<p>UPC code must be 13 digits. If your existing UPC is 12 digits you can add a leading '0' to the start of your UPC</p>" +
+            "<p>Decimal value not allowed in UPC code</p>" +
+            "<p>Please check at least one store</p>" +
+            "<p>Please select record label</p>"
+          "<p>Please copyright year</p>" +
+          "<p>Please select at least one store</p>" +
+          "<p>Please enter iTunes Preorder date</p>" +
+          "<p>Please enter original release date</p>";
+      
+          window.onload = async function() {
+            var regExp = /#/g;
+            var replaceWith = "";
+            // console.log((window.location.href + "").replace(regExp, replaceWith));
+            window.history.pushState(null, null, (window.location.href + "").replace(regExp, replaceWith));
+            var query = new URLSearchParams(window.location.search);
+      
+      
+            var language = query.get('language');
+      
+      
+            var promo = query.get('promo');
+      
+            if (promo != "") {
+              var promoURL = window.location.href + "";
+              promoURL = promoURL.replace(("&promo=" + promo), "");
+              window.history.pushState(null, null, promoURL);
+            }
+      
+            var method = query.get('method');
+      
+            if (method != "" && !((window.location.href + "").includes("step=pay_upload"))) {
+              var methodURL = window.location.href + "";
+              methodURL = methodURL.replace(("&method=" + method), "");
+              window.history.pushState(null, null, methodURL);
+            }
+      
+            if (language) {
+              if (language == "block") {
+                return;
+              }
+              if (language == 'test') {
+                return true;
+              }
+              var url = window.location + "";
+              url = url.replace("?language=" + language, "");
+              url = url.replace("&language=" + language, "");
+      
+              window.history.pushState(null, null, url);
+      
+              await sleep(500);
+      
+               //console.log("lang here "+language);
+              update_html(language);
+              // console.log("not here");
+      
+            } else {
+              // if (($("#resellerCompanyID").html() == "93") || ($("#resellerCompanyID").html() == "255")) {
+              var resel_lang = $("#resel_lang").val();
+              //console.log("no lang");
+      
+              if (resel_lang != 'en') {
+                await sleep(500);
+                update_html(resel_lang);
+              }
+              //}
+            }
+      
+          }
+      
+          function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+          }
+      
+          /*
+          Ajax call to php curl translator script
+          @param to, the language code to translate into
+          @param text, the text to translate
+          @returns text translated into specified language
+          */
+          function translate($to, $from, $text) {
+            return new Promise(resolve => {
+              $.ajax({
+                  method: "POST",
+                  url: "tr_translate.php",
+                  data: {
+                    to: $to,
+                    from: $from,
+                    text: $text
+                  }
+                })
+                .done(function(response) {
+                  resolve(response);
+                });
+            });
+          }
+      
+          //neutralise quotes and & with c1 tags (translator custom tags can be letter + digit) and replace later
+          function filter_out($text) {
+            //Can't translate an ampersand
+            var regExp = /&amp;/g;
+            var replaceWith = "<A1></A1>";
+            $text = $text.replace(regExp, replaceWith);
+            //Swedes hate " and ' ... 
+            regExp = /'/g;
+            replaceWith = "<C1></C1>";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /"/g;
+            replaceWith = "<C2></C2>";
+            $text = $text.replace(regExp, replaceWith);
+            //UPC means some weird stuff in other languages ... filter it out
+            regExp = /UPC/g;
+            replaceWith = "<U1></U1>";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /ISRC/g;
+            replaceWith = "<I1></I1>";
+            $text = $text.replace(regExp, replaceWith);
+            return $text;
+          }
+      
+          function sub_in($text) {
+            var regExp = /<A1><\/A1>/g;
+            var replaceWith = "&amp;";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /<C1><\/C1>/g;
+            replaceWith = "\'";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /<C2><\/C2>/g;
+            replaceWith = "\"";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /<U1><\/U1>/g;
+            replaceWith = "UPC";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /<I1><\/I1>/g;
+            replaceWith = "ISRC";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /\\n/g;
+            replaceWith = "";
+            $text = $text.replace(regExp, replaceWith);
+            regExp = /\\t/g;
+            replaceWith = "";
+            $text = $text.replace(regExp, replaceWith);
+            return $text;
+          }
+      
+          /*
+          Function triggered by request to change website
+          language. This will scrape html for all text and
+          then translate it and substitute it back into html
+          @param to, the language code to translate into
+          @returns true upon success
+          */
+          async function update_html($to) {
+            console.log(1);
+            var html_includes = false;
+      
+            if (document.all[0].innerHTML.includes("<link id=\"freshworks-frame\" rel=\"stylesheet\" href=\"https://aus-widget.freshworks.com/widgetBase/static/media/frame.d7ae132c.css\"")) {
+              html_includes = true;
+            }
+      
+            var query = new URLSearchParams(window.location.search);
+            var current_lang = query.get('language');
+            //Translating into same language .. no action
+            //$("#resel_lang").val($to);
+            if (current_lang == $to) {
+              return true;
+            }
+            //Translating into english, remove language param and reload page
+            if ($to == "en") {
+              //No laguage param to remove
+              if (current_lang == "") {
+                return true;
+              }
+              //Remove language param
+              else {
+                query.set('language', '');
+                query = (query + "").replace('&language=', "");
+                query = (query + "").replace('language=', "");
+      
+                var join = "";
+                if (query != "") {
+                  join = "?";
+                }
+      
+                var new_URL = (window.location + "").replace((window.location.search + ""), (join + query));
+      
+      
+                if (($("#resellerCompanyID").html() == "93") || ($("#resellerCompanyID").html() == "255")) {
+                  if (join == "") {
+                    new_URL = new_URL + "?language=block"
+                  } else if (join == "?") {
+                    new_URL = new_URL + "&language=block"
+                  }
+                }
+      
+                window.history.replaceState(null, null, new_URL);
+      
+      
+                window.location.reload();
+                return true;
+              }
+            }
+            console.log(2);
+      
+            //Reload page if it's not in english then the onload function will call update_html again
+            if (current_lang) {
+              query.set('language', $to);
+              var new_URL = (window.location + "").replace((window.location.search + ""), ("?" + query));
+              window.history.replaceState(null, null, new_URL);
+              window.location.reload();
+              return true;
+            }
+            console.log(3);
+      
+            var targets = [];
+            var indexes = [];
+            var iterator = 0;
+            var target = "";
+            var inner = "";
+            var count1 = 0;
+            var count2 = 0;
+      
+            //Scan HTML for text
+            for (var i = 0; i < document.all.length; i++) {
+              //console.log(i);
+      
+              if (document.all[i].id == "song_track_table") {
+                var target_int = i;
+                for (var j = i; j < document.all.length; j++) {
+                  if (document.all[j].id == "add_track_form") {
+                    target_int = j - 1;
+                    break;
+                  } else if (document.all[j].id == "translate_catch") {
+                    target_int = j - 1;
+                    break;
+                  }
+                }
+                i = target_int;
+                continue;
+              }
+              if (document.all[i].id == "pointlist") {
+                i = i + 13;
+                continue;
+              }
+      
+              //Ignore all the years etc
+              if (document.all[i].id == "copyright_year") {
+                i = i + 55;
+                continue;
+              }
+              //dont translate artist names
+              if (i >= 2) {
+                if (document.all[i - 2].id == "feat_artist_list") {
+                  i = i - 1 + document.all[i - 2].children.length;
+                  continue;
+                }
+                if (document.all[i - 2].id == "artist_list") {
+                  if ((document.all[i - 2].onchange + "").includes("main_artists")) {
+                    i = i - 1 + document.all[i - 2].children.length;
+                    continue;
+                  }
+                }
+              }
+              if (
+                (document.all[i].id == "isrc_popup" ||
+                  document.all[i].id == "cover_song" ||
+                  document.all[i].id == "classical_popup" ||
+                  document.all[i].id == "confirm_modal2" ||
+                  document.all[i].id == "confirm_modal1" ||
+                  document.all[i].id == "add_contributors" ||
+                  document.all[i].id == "add_producer" ||
+                  document.all[i].id == "add_feature_artists" ||
+                  document.all[i].id == "add_feature_artists_popup" ||
+                  document.all[i].id == "add_main_songwriter") &&
+                (!((window.location + "").includes("&step=track_upload")))
+      
+              ) {
+      
+                i = i + document.all[i].getElementsByTagName("*").length;
+                continue;
+              }
+      
+              if (document.all[i].id == "special") {
+                var message = document.all[i].innerHTML;
+                var tr_message = await translate($to, "en", message);
+                document.all[i].innerHTML = tr_message.split("\"")[5];
+                continue;
+              }
+      
+              if (document.all[i].id == "catalogue_item_display") {
+                i = i + document.all[i].getElementsByTagName("*").length;
+                continue;
+              }
+      
+              if (document.all[i].id == "Add_another_main_artist") {
+                var message = document.all[i].innerHTML;
+                var tr_message = await translate($to, "en", message);
+                document.all[i].innerHTML = tr_message.split("\"")[5];
+              }
+      
+              if (i > 2 && document.all[i - 2].id == "subject" && document.all[i - 2].name == "getRelease_id") {
+                i = i + document.all[i - 2].getElementsByTagName("*").length - 1;
+                continue;
+              }
+      
+              inner = document.all[i].innerHTML.trim();
+      
+              if (inner == "×") {
+                continue;
+              }
+      
+              //Skip blank text
+              if (inner != "") {
+                //filter out non-text elements
+                if (inner.includes("$.noConflict();")) {
+                  continue;
+                }
+                if (inner.includes("<") | inner.includes("{") | inner.includes("$(\"")) {
+                  //nested class definition needs to be un filtered out
+                  if (inner.substr(inner.length - 21, 21) == "<b class=\"caret\"></b>") {
+                    //find target text and update relevant fields
+                    target = inner.substr(0, inner.length - 21).trim();
+                    target = filter_out(target);
+                    targets[iterator] = target;
+                    indexes[iterator] = i;
+                    iterator++;
+                  }
+                  continue;
+                }
+      
+                //find target text and update relevant fields
+                target = inner.trim();
+                target = filter_out(target);
+      
+                //Don't translate company name
+                if (target == document.getElementsByClassName('mb0')[1].innerHTML.trim()) {
+                  continue;
+                }
+      
+                //Don't translate languages
+                if (target == "Afrikaans") {
+                  if (document.all[i + 1].innerHTML.trim().includes("Albanian")) {
+                    i += 84;
+                    continue;
+                  }
+                  i += 28;
+                  continue;
+                }
+      
+                targets[iterator] = target;
+                indexes[iterator] = i;
+                iterator++;
+      
+                //Ignore genres
+                if (target == "Select Primary Genre") {
+                  i += 79;
+                }
+                if (target == "Select Secondary Genre") {
+                  i += 76;
+                }
+              }
+            }
+      
+            console.log(4);
+      
+            sentences = "";
+            tr_sentences = "";
+            var translated = "";
+            var length = 0;
+      
+            for (var i = 0; i < iterator; i++) {
+              length += ("<p>" + targets[i] + "</p>").length;
+              if (length > 5000) {
+                translated = await translate($to, "en", sentences);
+                translated = translated.split("\"")[5].trim();
+                tr_sentences += translated;
+                sentences = "";
+                length = 0;
+                i -= 1;
+                continue;
+              }
+              sentences = sentences + "<p>" + targets[i] + "</p>";
+            }
+      
+            translated = await translate($to, "en", sentences);
+            translated = translated.split("\"")[5].trim();
+            tr_sentences += translated;
+            var regExp = /<p>/g;
+            var replaceWith = "";
+            tr_sentences = tr_sentences.replace(regExp, replaceWith);
+            tr_sentences_split = tr_sentences.split("</p>");
+      
+            if (!html_includes) {
+              document.all[0].innerHTML = (document.all[0].innerHTML + "").replace("<link id=\"freshworks-frame\" rel=\"stylesheet\" href=\"https://aus-widget.freshworks.com/widgetBase/static/media/frame.d7ae132c.css\"", "");
+            }
+      
+            for (var i = 0; i < iterator; i++) {
+              if (targets[i] == "&nbsp;") {
+                continue;
+              }
+      
+              if (tr_sentences_split[i] == undefined) {
+                continue;
+              }
+      
+              targets[i] = sub_in(targets[i]);
+              tr_sentences_split[i] = sub_in(tr_sentences_split[i]);
+              // alert(targets[i]);
+              // alert(tr_sentences_split[i]);
+              document.all[indexes[i]].innerHTML = document.all[indexes[i]].innerHTML.replace(targets[i], tr_sentences_split[i]);
+            }
+      
+            //Realease translate
+            if ((window.location + "").includes("&step=create_new")) {
+              window.default_error_messages = filter_out(window.default_error_messages);
+      
+              window.tr_error = await translate($to, "en", window.default_error_messages);
+              window.tr_error = window.tr_error.split("\"")[5].trim();
+              var regExp = /<p>/g;
+              var replaceWith = "";
+              window.tr_error = window.tr_error.replace(regExp, replaceWith);
+      
+              window.tr_error = sub_in(window.tr_error);
+              window.tr_error = window.tr_error.split("</p>");
+      
+      
+              sentences = "<p>" + $("#release_title").attr("placeholder") + "</p><p>" +
+                $("#release_title").attr("data-original-title") + "</p><p>" +
+                $("#release_date").attr("placeholder") + "</p><p>" +
+                $("#release_date").attr("data-original-title") + "</p><p>" +
+                $("#copyright_holder").attr("placeholder") + "</p><p>" +
+                $("#copyright_holder").attr("data-original-title") + "</p><p>" +
+                $("#primary_gener").attr("data-original-title") + "</p><p>" +
+                $("#secondary_gener").attr("data-original-title") + "</p><p>" +
+                $("#record_label").attr("data-original-title") + "</p><p>" +
+                $("#copyright_year").attr("data-original-title") + "</p><p>" +
+                $("#language").attr("data-original-title") + "</p><p>" +
+                $("#main_artists").attr("data-original-title") + "</p><p>" +
+                $("#original_rel_date").attr("data-original-title") + "</p><p>" +
+                $("#original_rel_date").attr("placeholder") + "</p><p>" +
+                $("#new_main_artists").attr("placeholder") + "</p><p>" +
+                $("#itunes_preorder_date").attr("placeholder") + "</p><p>" +
+                $("#itunes_preorder_date").attr("data-original-title") + "</p><p>" +
+                $("#new_record_label").attr("placeholder") + "</p>";
+      
+      
+              for (var i = 0; i < document.querySelectorAll("#pointlist li").length; i++) {
+                sentence = "" + document.getElementById("point" + (i + 1)).innerHTML;
+                sentences = sentences + "<p>" + sentence + "</p>";
+      
+              }
+              sentences = filter_out(sentences);
+      
+              translated = await translate($to, "en", sentences);
+              translated = translated.split("\"")[5].trim();
+              var regExp = /<p>/g;
+              var replaceWith = "";
+              translated = translated.replace(regExp, replaceWith);
+      
+              translated = sub_in(translated);
+      
+              translated_split = translated.split("</p>");
+      
+              $("#release_title").attr("placeholder", translated_split[0])
+              $("#release_title").attr("data-original-title", translated_split[1]);
+              $("#release_date").attr("placeholder", translated_split[2]);
+              $("#release_date").attr("data-original-title", translated_split[3]);
+              $("#copyright_holder").attr("placeholder", translated_split[4]);
+              $("#copyright_holder").attr("data-original-title", translated_split[5]);
+              $("#primary_gener").attr("data-original-title", translated_split[6]);
+              $("#secondary_gener").attr("data-original-title", translated_split[7]);
+              $("#record_label").attr("data-original-title", translated_split[8]);
+              $("#copyright_year").attr("data-original-title", translated_split[9]);
+              $("#language").attr("data-original-title", translated_split[10]);
+              $("#main_artists").attr("data-original-title", translated_split[11]);
+              $("#original_rel_date").attr("data-original-title", translated_split[12]);
+              $("#original_rel_date").attr("placeholder", translated_split[13]);
+              $("#new_main_artists").attr("placeholder", translated_split[14]);
+              $("#itunes_preorder_date").attr("placeholder", translated_split[15]);
+              $("#itunes_preorder_date").attr("data-original-title", translated_split[16]);
+              $("#new_record_label").attr("placeholder", translated_split[17]);
+      
+              for (var i = 0; i < document.querySelectorAll("#pointlist li").length; i++) {
+                document.getElementById("point" + (i + 1)).innerHTML = translated_split[i + 18];
+              }
+              //artist translate
+              sentence = "<p>" + document.getElementById("artist_list").innerHTML.split(">")[1].split("<")[0].trim() + "</p><p>" + document.getElementById("various_artist") + "<p>";
+              sentence = filter_out(sentence);
+              tr_sentence = await translate($to, "en", sentence);
+              tr_sentence = tr_sentence.split("\"")[5].trim();
+              tr_sentence = sub_in(tr_sentence);
+              document.getElementById("artist_list").innerHTML = document.getElementById("artist_list").innerHTML.replace(sentence, tr_sentence);
+      
+            }
+      
+            if ((window.location + "").includes("&step=track_upload")) {
+              sentences = "<p>" + $("#track_artist").attr("placeholder") + "</p><p>" +
+                $("#track_artist").attr("data-original-title") + "</p><p>" +
+                $("#track_name").attr("placeholder") + "</p><p>" +
+                $("#track_name").attr("data-original-title") + "</p><p>" +
+                $("#new_feature_artists").attr("placeholder") + "</p><p>" +
+                $("#add_new_another_main_artists").attr("placeholder") + "</p><p>" +
+                $("#feature_artist_box").attr("placeholder") + "</p><p>" +
+                $("#feature_artist_box").attr("data-original-title") + "</p><p>" +
+                $("#new_producer").attr("placeholder") + "</p><p>" +
+                $("#new_songwriter").attr("placeholder") + "</p><p>" +
+                $("#producer").attr("placeholder") + "</p><p>" +
+                $("#writer_composer").attr("data-original-title") + "</p><p>" +
+                $("#writer_composer").attr("placeholder") + "</p>";
+      
+              sentences = filter_out(sentences);
+              // return false;
+              translated = await translate($to, "en", sentences);
+              translated = translated.split("\"")[5].trim();
+              var regExp = /<p>/g;
+              var replaceWith = "";
+              translated = translated.replace(regExp, replaceWith);
+      
+              translated = sub_in(translated);
+      
+              translated_split = translated.split("</p>");
+      
+              $("#track_artist").attr("placeholder", translated_split[0]);
+              $("#track_artist").attr("data-original-title", translated_split[1]);
+              $("#track_name").attr("placeholder", translated_split[2]);
+              $("#track_name").attr("data-original-title", translated_split[3]);
+              $("#new_feature_artists").attr("placeholder", translated_split[4]);
+              $("#add_new_another_main_artists").attr("placeholder", translated_split[5]);
+              $("#feature_artist_box").attr("placeholder", translated_split[6]);
+              $("#feature_artist_box").attr("data-original-title", translated_split[7]);
+              $("#new_producer").attr("placeholder", translated_split[8]);
+              $("#new_songwriter").attr("placeholder", translated_split[9]);
+              $("#producer").attr("placeholder", translated_split[10]);
+              $("#writer_composer").attr("data-original-title", translated_split[11]);
+              $("#writer_composer").attr("placeholder", translated_split[12]);
+            }
+            console.log(5);
+      
+            if ((window.location + "").includes("catalogue.php")) {
+              sentences = "<p>" + $("#search_album").attr("placeholder") + "</p>";
+              sentences = filter_out(sentences);
+              translated = await translate($to, "en", sentences);
+              translated = translated.split("\"")[5].trim();
+              var regExp = /<p>/g;
+              var replaceWith = "";
+              translated = translated.replace(regExp, replaceWith);
+              translated = sub_in(translated);
+              translated_split = translated.split("</p>");
+      
+              $("#search_album").attr("placeholder", translated_split[0]);
+            }
+      
+            if (!html_includes) {
+              document.all[0].innerHTML = (document.all[0].innerHTML + "").replace("<head>", "<link id=\"freshworks-frame\" rel=\"stylesheet\" href=\"https://aus-widget.freshworks.com/widgetBase/static/media/frame.d7ae132c.css\"<head>");
+            }
+      
+      
+      
+            if (document.getElementsByTagName("BODY")[0].innerHTML.substr(0, 5).trim() == "&gt;") {
+              document.getElementsByTagName("BODY")[0].innerHTML = document.getElementsByTagName("BODY")[0].innerHTML.replace("&gt;", "");
+            }
+      
+            var url_ending = "";
+      
+            if (query == "") {
+              url_ending = "?language=" + $to;
+            } else {
+              url_ending = "&language=" + $to;
+            }
+      
+            // document.getElementById('modal').style.display = "none";
+            document.getElementById('lang-heading-dropdown').innerHTML = ("<span>" + ($to.toUpperCase()) + "<b class=\"caret\"></b></span>");
+            window.history.replaceState(null, null, ((window.location + "")) + url_ending);
+            return true;
+          }
+      
+          //update links to have language variable ... wierd patch to inline php script not 
+          //detecting query string without initial dashboard reload
+          function updateLink($id, $emptyQS) {
+            var query = new URLSearchParams(window.location.search);
+            var current_lang = query.get('language');
+           // console.log(current_lang);
+      
+            if (!current_lang) {
+              return true;
+            }
+            if ($emptyQS == "false") {
+              document.getElementById($id).href = document.getElementById($id).href + "&language=" + current_lang;
+            } else {
+              document.getElementById($id).href = document.getElementById($id).href + "?language=" + current_lang;
+            }
+          }
+        </script>
+        <script>
+          async function tr_alert($error) {
+            var query = new URLSearchParams(window.location.search);
+            var to = query.get('language');
+            if (!to) {
+              alert($error);
+            } else {
+              $error = filter_out($error);
+              var message = await translate(to, "en", $error);
+              message = message.split("\"")[5].trim();
+              message = sub_in(message);
+              alert(message);
+            }
+          }
+      
+          async function write_html($id, $message) {
+            var query = new URLSearchParams(window.location.search);
+            var to = query.get('language');
+            if (!to) {
+              $($id).html($message).fadeOut(3000);
+            } else {
+              $message = filter_out($message);
+              $message = await translate(to, "en", $message);
+              $message = $message.split("\"")[5].trim();
+              $message = sub_in($message);
+              $($id).html($message).fadeOut(3000);
+      
+            }
+          }
+        </script>
+      <style type="text/css">
+          .box-tex {
+              font-weight: 500;
+          }
+          .vod{
+              padding: 90px 15px;
+          }
+      
+      @media only screen and (max-width:900px) {
+       .vod{
+              padding:130px 15px;
+          }
+      }
+      @media only screen and (max-width:766px) {
+       .vod{
+              padding:90px 15px;
+          }
+      }
+      </style>
+      
+      
+      
+                <section id="events" class="ds ms page_about parallax  table_section table_section_md columns_margin_bottom_30 padding-bottom_40" style="background-position: 50% 1px;">
+      
+          <div class="container music-dashboard pt30">
+              <!--<div class="row">
+                      <div class="text-center mb10 img-dash-tp" >
+                          <a href="https://www.toneden.io/gyrotoneden/post/get-your-single-professionally-recorded-released" target="_blank"><img src="images/music-img.jpg" alt="" class="img-responsive" style="width:100%;"></a>
+                      </div>
+                  </div>-->
+      
+              <div class="row">
+                  <div class="col-md-10 col-md-offset-1 mb0 dash-page-head">
+                      <h3 class="mb0" style="letter-spacing: 1px;">MY MUSIC DASHBOARD</h3>
+                  </div>
+              </div>
+                  <div class="row">
+                      <div class="col-md-10 mb30 col-md-offset-1">
+                          <div class="row">
+                              <div class=" col-md-4 col-sm-6 mb20">
+                                  <div class="option release-1">
+                                      <div>
+                                          <div class="title-float-left">
+                                              <h3 class="h4 tile-text" style="height: 20px;">Create New Release</h3>
+                                          </div>
+                                          <div class="btn-group mb10 btn-float-right">
+                                              <a onclick="updateLink('create_link', 'false')" id="create_link" href="https://rilis.distrowave.com/create_new_release.php?id=new&amp;step=create_new" class="btn btn-trans go-btn">START</a>                                       <!--                                              <a onclick="updateLink('create_link', 'false')" id="create_link" href="https://rilis.distrowave.com/create_new_release.php?id=new&step=create_new" class="btn btn-trans go-btn">START</a>
+                                                                                          <a href="https://rilis.distrowave.com/dashboard.php" class="btn btn-trans go-btn" onclick="alert('Due to recently imposed sanctions against Russian financial institutions, our 3rd party payment providers are currently unable to pay royalties to our Russian customers. Whilst this situation is being enforced we have suspended uploads of new releases for Russian account holders. We apologise for any inconvenience caused, please contact support if you require further information.')">START</a>-->
+                                               
+                                          </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="div-border"></div>
+                                      <figure><i class="fa fa-plus" style="font-size:60px" aria-hidden="true"></i></figure>
+                                      <!-- <div class="btn-group">
+                                      <a href="catalogue.php" id='catalogue_button' onclick="updateLink('catalogue_button', 'true')" class="btn btn-trans">Enter</a>
+                                  </div> -->
+                                  </div>
+                              </div>
+      
+      
+      
+                              <div class=" col-md-4 col-sm-6 mb20">
+                                  <div class="option release-2">
+                                      <div>
+                                          <div class="title-float-left">
+                                              <h3 class="h4  tile-text" style="height: 20px;">Catalogue</h3>
+                                          </div>
+                                          <div class="btn-group mb10 btn-float-right">
+                                              <a href="catalogue.php" id="catalogue_button" onclick="updateLink('catalogue_button', 'true')" class="btn btn-trans go-btn">VIEW</a>
+                                          </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="div-border"></div>
+                                      <figure><i class="fa fa-music" aria-hidden="true"></i></figure>
+                                      <!-- <div class="btn-group">
+                                      <a href="catalogue.php" id='catalogue_button' onclick="updateLink('catalogue_button', 'true')" class="btn btn-trans">Enter</a>
+                                  </div> -->
+                                  </div>
+                              </div>
+                                                      <style>
+                                  .latest-release {
+                                      background: url('https://music-vault.s3.ap-southeast-2.amazonaws.com/artworks/9353450803839/1658574284.jpg');
+                                      height: 160px;
+                                      background-size: cover;
+                                      background-position: center;
+                                      border-radius: 0 0 15px 15px;
+                                  }
+                              </style>
+                              <div class=" col-md-4 col-sm-6 mb20">
+                                  <div class="option release-3">
+                                      <div>
+                                          <div class="title-float-left">
+                                              <h3 class="h4 tile-text" style="height: 20px;">Latest Release</h3>
+                                          </div>
+                                          <div class="btn-group mb10 btn-float-right">
+                                                                                                                                          <a href="view-catalogue.php?release_id=82699" class="btn btn-trans go-btn">VIEW</a>
+                                                                                                                              </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="div-border"></div>
+                                      <div class="latest-release">
+                                          <!-- <figure> <i class="fa fa-play-circle-o"></i></figure> -->
+                                      </div>
+                                      <!-- < <i class="fa fa-play-circle-o"></i>-->
+                                      <!-- <div class="btn-group">
+                                      <a href="catalogue.php" id='catalogue_button' onclick="updateLink('catalogue_button', 'true')" class="btn btn-trans">Enter</a>
+                                  </div> -->
+                                  </div>
+                              </div>
+      
+      
+                          </div>
+                      </div>
+      
+                  </div>
+      
+                  <div class="row">
+                      <div class="col-md-10 col-md-offset-1 mb0 dash-page-head">
+                          <h3 class="mb0" style="letter-spacing: 1px;">Royalties and Analytics</h3>
+                      </div>
+                  </div>
+      
+                  <div class="row">
+                      <div class="col-md-10 mb30 col-md-offset-1">
+                          <div class="row">
+      
+                              <div class=" col-md-4 col-sm-6 mb20">
+                                  <div class="option release-1" style="min-height:130px">
+                                      <div>
+                                          <div class="title-float-left">
+                                              <h3 class="h4  tile-text" style="height: 20px;">Royalty Payments</h3>
+                                          </div>
+                                          <div class="btn-group mb10 btn-float-right">
+                                              <a href="#" class="btn btn-trans go-btn" onclick="my_analytics_payout();">GO</a>
+                                          </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="div-border"></div>
+                                      <div class="mt20">
+                                          <div class="large-text-tile"><span style="font-size: 25px;">Rp</span><b>189.2k</b></div>
+                                          <div class="small-text-tile" style="margin-top:13px!important;margin-left: 5px!important;">balance</div>
+                                          <div class="icon-float-right"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                                      </div>
+                                      <!-- <div class="mt20">
+                                      <div class="large-text-tile" style="margin-left: 5px">
+                                          <div style="text-align:left;"><b>Rp189.2k</b></div><div class="royalty-stext">available balance</div></div>
+                                      
+                                      <div class="icon-float-right"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                                      
+                                  </div> -->
+                                  </div>
+                              </div>
+      
+                              <div class=" col-md-4 col-sm-6 mb20">
+                                  <div class="option release-2" style="min-height:130px;">
+                                      <div>
+                                          <div class="title-float-left">
+                                              <h3 class="h4 tile-text" style="height: 20px;">Payment Splits</h3>
+                                          </div>
+                                          <div class="btn-group mb10 btn-float-right">
+                                                                                          <a id="payment-splitting" onclick="updateLink('payment-splitting', 'true')" href="payment-splitting.php" class="btn btn-trans go-btn">EDIT</a>
+                                                                                  </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="div-border"></div>
+                                      <div class="mt10 text-center">
+                                          <div><i class="fa-solid fa-money-bill-transfer" style="font-size:50px"></i></div>
+                                      </div>
+                                      <!-- <figure style="line-height: 120px;"><i class="fa fa-music"></i></figure> -->
+                                      <!-- <div class="btn-group">
+                                      <a href="catalogue.php" id='catalogue_button' onclick="updateLink('catalogue_button', 'true')" class="btn btn-trans">Enter</a>
+                                  </div> -->
+                                  </div>
+                              </div>
+      
+                              <div class=" col-md-4 col-sm-6 mb20">
+                                  <div class="option release-3" style="min-height:130px">
+                                      <div>
+                                          <div class="title-float-left">
+                                              <h3 class="h4 tile-text" style="height: 20px;">Streaming Analytics</h3>
+                                          </div>
+      
+                                          <div class="btn-group mb10 btn-float-right">
+                                              <a href="#" class="btn btn-trans go-btn" onclick="my_analytics();">VIEW</a>
+                                          </div>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <div class="div-border"></div>
+                                      <div class="mt20">
+                                                                              <div class="large-text-tile"><b>26</b></div>
+                                          <div class="small-text-tile">past 7 days</div>
+                                          <div class="icon-float-right"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                                      </div>
+                                      <!-- <figure style="line-height: 120px;"><i class="fa fa-music"></i></figure> -->
+                                      <!-- <div class="btn-group">
+                                      <a href="catalogue.php" id='catalogue_button' onclick="updateLink('catalogue_button', 'true')" class="btn btn-trans">Enter</a>
+                                  </div> -->
+                                  </div>
+                              </div>
+      
+                          </div>
+                      </div>
+      
+                  </div>
+              </div>
+          </section>
+              
+      
+      
+      <!-- change password modal 
+      <div class="modal fade" id="change-password" role="dialog" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog">
+              <div class="modal-content popup-bg">
+                  <div class=" ">
+                      <div class="modal-header chg-pssd text-center">
+                          <button type="button" class="close" data-dismiss="modal" style="display:none;"> &times; </button>
+                          <h4 class="modal-title pt0">Please Update your Password</h4>
+                      </div>
+                      <div class="modal-body">
+                          <div class="chg-pssd fontsize_12">We've recently made some important upgrades to your account
+                              security. Please
+                              update your
+                              password to enable these features. You will only be asked to do this once. Thank you!</div>
+                          <form name="password_frm" id="password_frm" class="columns_padding_10 topmargin_10" method="post" action="#">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="form-group margin_0">
+      
+                                          <input type="password" aria-required="true" size="30" value="" name="old_password" id="old_password" class="form-control" placeholder="Old password" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <div class="form-group margin_0">
+                                          <input type="password" aria-required="true" size="30" value="" name="new_password" id="new_password" class="form-control" placeholder="New password" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <div class="form-group margin_0">
+                                          <input type="password" aria-required="true" size="30" value="" name="cnf_new_password" id="cnf_new_password" class="form-control" placeholder="Confirm password" required>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row topmargin_10 pb10">
+                                  <div class="col-sm-12">
+                                  </div>
+                                  <div class="contact-form-submit text-center"> <button type="submit" id="password_frm_btn" name="password_frm_btn" class="theme_button color1 min_width_button" value="Submit">Submit</button></div>
+                              </div>
+                              <p class='fontsize_15 font300 font-fff'><a href="logout_forgot_password.php">Forgot your
+                                      password?</a>(you will be redirected to the front page where you can reset your password) </p>
+                              <div class="row topmargin_10 pb10">
+                                  <div class="col-sm-12"> </div>
+                                  <div id='password_frm_err' class="text-center text-warning color-green"> </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+      
+      <!-- change password modal -->
+      
+      <!-- <script>
+          // change password
+          $(document).ready(function() {
+              setTimeout(function() {
+                  const timestampString = "2021-10-12 13:00:00";
+                  const startDate = Date.parse(timestampString);
+                  const userDate = Date.parse("2021-11-13 15:55:18")
+                  if (userDate < startDate) {
+                      // hide reset password modal when loged in from dd admin
+                                          $("#change-password").modal('show')
+                                  }
+              })
+      
+              $("#new_password").keyup(function(e) {
+                  const value = e.target.value;
+                  if (/^[A-Za-z0-9!@#$%^&* ]{8,}$/.test(value) &&
+                      /[a-z]/.test(value) &&
+                      /\d/.test(value)) {
+                      $(".alert.alert-danger").remove()
+                      $("#password_frm_btn").attr("disabled", false)
+                  } else {
+                      if ($(".alert.alert-danger").length > 0) {
+                          // pass
+                      } else {
+                          $(e.target).parent().append(
+                              "<div class='alert alert-danger'>Minimum eight characters, at least one small letter and one number</div>"
+                          )
+                          $("#password_frm_btn").attr("disabled", "disabled")
+                      }
+      
+                  }
+              })
+              // if($("#resellerCompanyID").html() == "93 ") {
+              //     update_html('pt');
+              // }
+          })
+      
+          $("#password_frm").submit(function(e) {
+              e.preventDefault()
+              var password_frm = $('#password_frm').serialize();
+              setTimeout(function() {
+      
+                  $.ajax({
+                      type: "POST",
+                      //dataType : "json",
+                      //dataType: "html",
+                      url: "https://rilis.distrowave.com/model/do_password_change.php",
+                      data: password_frm,
+                  }).done(function(response) {
+                      if (response == "success") {
+                          $("#change-password").modal('hide')
+                          $("#password_frm_err").html('Your password changed successfully !');
+                          $('#password_frm').trigger("reset");
+                      } else {
+                          $("#password_frm_err").html(response);
+                          $('#password_frm').trigger("reset");
+                      }
+                  });
+      
+              }, 1000);
+          });
+      
+          // change password
+      </script> -->
+      
+      <script type="text/javascript">
+          function my_analytics1() {
+              tr_alert(
+                  "There is no data available. You need at least 1 delivered album in your catalogue to access streaming analytics."
+              );
+          }
+      
+          function my_analytics() {
+                          window.location.href = "my_analytics.php";
+                  }
+      
+          function my_analytics_payout1() {
+              //alert("You do not have any delivered albums on the app stores.");
+              window.location.href = "payout.php?response=6";
+          }
+      
+          function my_analytics_payout() {
+                          window.location.href = "payout.php";
+                  }
+      </script>
+      
+      
+      <footer class="page_footer parallax1 footer-cust ds ms pt20" id="contact" style="z-index:3; background-repeat: repeat-y;">
+      
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-10 mb30 col-md-offset-1">
+                      <div class="row ">
+      
+                          <div class="col-md-4 col-sm-6 ">
+      
+                              <h5 class="widget-titile footer-font">Legal</h5>
+      
+                              <ul class="list1 no-bullets no-top-border no-bottom-border greylinks">
+      
+                                  <!--<li> <a href="about.php">Mission statement</a> </li>-->
+      
+                                  <li style="border: none;"> <a href="terms_and_conditions.php" target="_blank">Terms of Service</a> </li>
+      
+                                  <li style="border: none;"> <a href="privacy.php" target="_blank">Privacy policy</a> </li>
+      
+                              </ul>
+      
+                          </div>
+      
+      
+      
+                          <div class="col-md-4 col-sm-6 mb0">
+      
+                              <h5 class="widget-titile footer-font">Need Help?</h5>
+      
+                              <ul class="list1 no-bullets no-top-border no-bottom-border greylinks">
+      
+                                  <li style="border: none;"> <a onclick="openWidget()" style="cursor:pointer;">FAQs</a> </li>
+                                                                  <li style="border: none;"> <a class="lightbox-211371298555864" style="cursor:pointer;">Contact Support</a> </li>
+                                                          </ul>
+      
+                              <style type="text/css">
+                                  .jt-feedback div,
+                                  iframe,
+                                  .jt-content {
+      
+                                      background-color: transparent !important;
+                                  }
+                              </style>
+      
+                              <script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+                              <script type="text/javascript">
+                                  var JFL_211371298555864 = new JotformFeedback({
+                                      formId: '211371298555864',
+                                      base: 'https://form.jotform.com/',
+                                      windowTitle: 'Heading',
+                                      background: 'rgba(0,0,0,0.87)',
+                                      fontColor: '#FFFFFF',
+                                      type: '2',
+                                      height: 640,
+                                      width: 660,
+                                      openOnLoad: false,
+                                      iframeParameters: {
+                                          'reselid': '134',
+                                          'resellerName': 'Distrowave',
+                                          'registeredEmail': 'Syarif.hidayat218@yahoo.com',
+                                          "yourName": "Syarif Hidayat"
+                                      }
+                                  });
+                              </script>
+      
+                          </div>
+      
+                          <div class="col-md-4 col-sm-6">
+      
+                              <h5 class="widget-titile footer-font">Get Social</h5>
+      
+                              <div class="topmargin_20">
+                                                                  <a href="https://www.facebook.com/distrowave" target="_blank" class="fa fa-facebook-square footer-social footer-font" aria-hidden="true"></a>
+                                  
+                                                                  <a href="https://twitter.com/distrowave" target="_blank" class="fa fa-twitter footer-social footer-font" aria-hidden="true"></a>
+                                  
+                                                                  <a href="https://www.youtube.com/distrowave" target="_blank" class="fa fa-youtube footer-social footer-font" aria-hidden="true"></a>
+                                  
+                                                                  <a href="https://www.instagram.com/distrowave" target="_blank" class="fa fa-instagram footer-social footer-font" aria-hidden="true"></a>
+                                  
+                              </div>
+      
+                              
+                          </div>
+      
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-12 text-left">
+                              <p class="small-text" style="color: grey"><b>© Copyright 2023 Distrowave. All Rights Reserved.</b></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      
+      
+      <div id="snackbar">With in 24 hours we will get back to you. Thanks you.</div>
+      
+      <style>
+          #snackbar {
+      
+              visibility: hidden;
+      
+              min-width: 250px;
+      
+              margin-left: -125px;
+      
+              background-color: #00b388;
+      
+              color: #fff;
+      
+              text-align: center;
+      
+              border-radius: 2px;
+      
+              padding: 16px;
+      
+              position: fixed;
+      
+              z-index: 10;
+      
+              left: 50%;
+      
+              bottom: 30px;
+      
+              font-size: 17px;
+      
+          }
+      
+      
+      
+          #snackbar.show {
+      
+              visibility: visible;
+      
+              -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      
+              animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      
+          }
+      
+      
+      
+          @-webkit-keyframes fadein {
+      
+              from {
+                  bottom: 0;
+                  opacity: 0;
+              }
+      
+              to {
+                  bottom: 30px;
+                  opacity: 1;
+              }
+      
+          }
+      
+      
+      
+          @keyframes fadein {
+      
+              from {
+                  bottom: 0;
+                  opacity: 0;
+              }
+      
+              to {
+                  bottom: 30px;
+                  opacity: 1;
+              }
+      
+          }
+      
+      
+      
+          @-webkit-keyframes fadeout {
+      
+              from {
+                  bottom: 30px;
+                  opacity: 1;
+              }
+      
+              to {
+                  bottom: 0;
+                  opacity: 0;
+              }
+      
+          }
+      
+      
+      
+          @keyframes fadeout {
+      
+              from {
+                  bottom: 30px;
+                  opacity: 1;
+              }
+      
+              to {
+                  bottom: 0;
+                  opacity: 0;
+              }
+      
+          }
+      </style>
+      
+      
+      
+      <script type="text/javascript">
+          jQuery(document).ready(function() {
+      
+              CalcPrice();
+      
+              $("#enquiry_form_button").click(function(e) {
+      
+                  var enquiry_form = $('#enquiry_form').serialize();
+      
+                  var subject = $("#subject").val();
+      
+                  var release_name = $("#release_name").val();
+      
+                  var message = $("#message").val();
+      
+      
+      
+                  if (subject == "" || release_name == "" || message == "")
+      
+                  {
+      
+                      $("#enquiry_form_err").show();
+      
+                      $("#enquiry_form_err").html('All fields are mandatory');
+      
+      
+      
+                  } else
+      
+                  {
+      
+                      $(".Gyro_loaderNew_footer").show();
+      
+                      setTimeout(function() {
+      
+                          // Do something after 1 second
+      
+                          $.ajax({
+      
+                              type: "POST",
+      
+                              //dataType : "json",
+      
+                              //dataType: "html",
+      
+                              url: "/model/do_submit_enquiry.php",
+      
+                              data: enquiry_form,
+      
+                          }).done(function(response) {
+      
+                              //alert(response);
+      
+                              if (response == "success")
+      
+                              {
+      
+                                  $(".Gyro_loaderNew_footer").hide();
+      
+                                  $("#enquiry_form_err").show();
+      
+                                  $("#enquiry_form_err").html('Thank you for your enquiry. We will get back to you within 24hrs.');
+      
+                                  $("#subject").val("Copyright Year");
+      
+                                  $("#release_name").val("");
+      
+                                  $("#message").val("");
+      
+                              } else {
+      
+                                  $(".Gyro_loaderNew_footer").hide();
+      
+                                  $("#enquiry_form_err").show();
+      
+                                  $("#enquiry_form_err").html(response);
+      
+                              }
+      
+                          });
+      
+                          // to prevent refreshing the whole page page
+      
+                      }, 1000);
+      
+                  }
+      
+              });
+      
+              $("#mail_form_button").click(function(e) {
+      
+                  var mail_form = $('#mail_form').serialize();
+      
+                  $("#mail_form_err").html("<img src='https://theblogbar.com/wp-content/uploads/2017/08/loading-1.gif' width='30px'>");
+      
+                  setTimeout(function() {
+      
+                      $.ajax({
+      
+                          type: "POST",
+      
+                          url: "/model/do_mail_form.php",
+      
+                          data: mail_form,
+      
+                      }).done(function(response) {
+      
+                          if (response == "success") {
+      
+                              $("#mail_form").html("<img src='https://theblogbar.com/wp-content/uploads/2017/08/loading-1.gif' width='30px'>");
+      
+                              $("#mail_form_err").html('');
+      
+                              $("#mail_form").html('Thank you for your query, We will get back to you within 24hrs');
+      
+                          } else {
+      
+                              $("#mail_form_err").show();
+      
+                              $("#mail_form_err").html(response);
+      
+      
+      
+                          }
+      
+                      });
+      
+                  }, 1000);
+      
+              });
+      
+          });
+      
+          function ac_sub_promo_code_button_toggle_on() {
+      
+              $("#promo_code_err").html("<div style='text-align:center'><img src='img/loading-1.gif' style='width:50px'</div>");
+              $('#ac_sub_promo_code').val('');
+      
+              ac_sub_applyPaypameforExt();
+      
+              $("#ac_sub_price_id_3").hide();
+              $("#promo_code_err").html("Promo code removed").fadeIn().fadeOut(5000);
+              $('#apply_ac_sub_promo').removeAttr('onclick');
+              $('#apply_ac_sub_promo').attr('onclick', 'ac_sub_promo_code_button_toggle_off()');
+              $('#ac_sub_promo_code').removeAttr('readonly');
+              $('#ac_sub_promo_code').removeAttr('style');
+              $('#apply_ac_sub_promo').html('Apply');
+      
+          }
+      
+          function ac_sub_promo_code_button_toggle_off() {
+      
+              var promo_code = $('#ac_sub_promo_code').val();
+              var old_amountFinal = $("#ac_sub_old_amount").val();
+      
+              if (promo_code == '') {
+                  alert("Please enter promo code");
+                  return false;
+              } else {
+      
+                  $.ajax({
+      
+                      url: "https://rilis.distrowave.com/model/account_subscription_promo_apply.php",
+                      method: 'POST',
+                      data: {
+                          'promo_code': promo_code,
+                          'old_amountFinal': old_amountFinal
+                      },
+                      success: function(response) {
+      
+                          if (response == 'notexist') {
+                              $("#promo_code_err").html("Expired or invalid promo code");
+                              $("#ac_sub_promo_code").val('');
+                          } else if (response == 'error') {
+                              $("#promo_code_err").html("Something went wrong!");
+                              $("#ac_sub_promo_code").val('');
+                          } else {
+      
+                              var obj = JSON.parse(response);
+                              $('#ac_sub_promo_code').attr('readonly', 'readonly');
+                              $('#ac_sub_new_price').html(obj.new_price.toFixed(2));
+      
+                              $("#ac_sub_price_id_1").hide();
+                              $("#ac_sub_price_id_3").show();
+                              $("#ac_sub_price_id_2").hide();
+      
+                              $("#promo_code_err").html(obj.new_msg);
+                              $("#promo_code_err").show();
+      
+                              $('#apply_ac_sub_promo').html('Cancel');
+      
+                              $('#apply_ac_sub_promo').removeAttr('onclick');
+                              $('#ac_sub_promo_code').attr('style', "background:#00b388 !important");
+                              $('#apply_ac_sub_promo').attr('onclick', 'ac_sub_promo_code_button_toggle_on()');
+      
+      
+                          }
+      
+                      }
+      
+                  })
+      
+              }
+      
+      
+      
+          }
+      
+          function ac_sub_applyPaypameforExt() {
+      
+              var old_amountFinal = $("#ac_sub_old_amount").val();
+              var promo_code = $("#ac_sub_promo_code").val();
+      
+              $.ajax({
+                  url: 'https://rilis.distrowave.com/model/account_subscription_promo_apply.php',
+                  type: 'POST',
+                  data: {
+                      old_amountFinal: old_amountFinal,
+                      promo_code: promo_code
+                  },
+      
+                  success: function(data) {
+      
+                      var obj = JSON.parse(data);
+                      $('#ac_sub_new_pricedExt').html(obj.new_price);
+                      $("#ac_sub_price_id_1").hide();
+                      $("#ac_sub_price_id_3").hide();
+                      $("#ac_sub_price_id_2").show();
+                      // $('#CalculateOldPriceExtrax').html(obj.CalculateOldPriceExtrax);
+      
+                  }
+              });
+          }
+      
+          function CalcPrice() {
+      
+              var qty = $('#artist_qty').val();
+      
+              var base_price = '';
+      
+              var price = qty * base_price;
+      
+              $('.total1').html('Rp ' + price.toFixed(2));
+      
+          }
+      
+          $('#upgrade').click(function() {
+      
+              $('#title_modalpopup').html('Upgrade your subscription to add more artists');
+              $('#annual_sub_heading').html('Current Number of Artist Allowed: 0');
+              $('#annual_sub_points').hide();
+              $('#annual_price_heading').hide();
+      
+              $('#add_account_subscription').modal('show');
+              $('#subscription_type').val('upgrade');
+              $('.update_sub').show();
+              $('.promo_div').hide();
+              $('.total1_div').removeClass('col-md-4');
+              $('.total1_div').addClass('col-md-6');
+              $('#total1_lbl1').html('New annual subscription amount');
+              $('#total1_lbl3').show();
+          });
+      
+          $('.account_subscription_modal').click(function() {
+      
+              $('#title_modalpopup').html('Subscribe for Unlimited Releases');
+              $('#annual_sub_heading').html('Annual subscription for  IDR per year');
+              $('#annual_sub_points').show();
+              $('#annual_price_heading').show();
+              $('.update_sub').hide();
+              $('.total1_div').addClass('col-md-4');
+              $('.total1_div').removeClass('col-md-6');
+              $('#total1_lbl1').html('Total');
+              $('#add_account_subscription').modal('show');
+              $('#total1_lbl3').hide();
+          })
+      </script>
+      
+      
+      
+      <script>
+          function footerPopup() {
+      
+              var x = document.getElementById("snackbar");
+      
+              x.className = "show";
+      
+              setTimeout(function() {
+                  x.className = x.className.replace("show", "");
+              }, 3000);
+      
+          }
+      </script>
+      
+      <script>
+          /* This is the function to open the widget code */
+      
+      
+          function openWidget() {
+              FreshworksWidget('open');
+          }
+      
+          function openWidgetArticle() {
+              FreshworksWidget('open', 'article', {
+                  id: 43000556672
+              });
+          }
+      
+          window.fwSettings = {
+              'widget_id': 51000000963
+          };
+          ! function() {
+              if ("function" != typeof window.FreshworksWidget) {
+                  var n = function() {
+                      n.q.push(arguments)
+                  };
+                  n.q = [], window.FreshworksWidget = n
+              }
+          }()
+      </script>
+      <script onload="FreshworksWidget('hide', 'launcher');" type="text/javascript" src="https://aus-widget.freshworks.com/widgets/51000000963.js" async="" defer="">
+      
+      
+      </script>
+      
+                      <!-- <section class="ds ms page_copyright parallax section_padding_15 with_top_border_container">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-sm-12 text-center">
+                                      <p class="small-text">&copy; Copyright 2023. All Rights Reserved.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </section> -->
+                  
+              
+              
+                      <script src="js/compressed.js"></script>
+                      
+              <script src="js/mediaelement-and-player.min.js"></script>
+              <script src="js/mediaelement-migrate.min.js"></script>
+              <script>
+                  var _cueSettings = {
+                      "l10n":
+                      {
+                          "nextTrack": "Next Track",
+                          "previousTrack": "Previous Track",
+                          "togglePlayer": "Toggle Player",
+                          "togglePlaylist": "Toggle Playlist"
+                      }
+                  };
+              </script>
+              <script src="js/cue.min.js"></script>
+              <script src="js/main.js"></script>
+          
+      <a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a><div id="freshworks-container" data-html2canvas-ignore="true" style="width: 0px; height: 0px; bottom: 0px; right: 0px; z-index: 2147483647;"><div aria-live="polite"><iframe allowfullscreen="" id="lightbox-frame" data-testid="lightbox-frame" style="display: none;"></iframe></div></div><iframe title="FreshworksWidget" id="freshworks-frame" data-html2canvas-ignore="true" style="display: none;"></iframe></body>
+</body>
+</html>

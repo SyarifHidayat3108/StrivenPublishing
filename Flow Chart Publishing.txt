@@ -1,0 +1,18 @@
+contoh flow Chat yang dapat diimplementasikan di aplikasi publishing lagu:
+
+Selamat datang di Music Publishing App. Apakah Anda ingin mengunggah lagu atau hanya mencari lagu untuk didengarkan?
+2a. Jika Anda ingin mengunggah lagu, silakan login atau daftar terlebih dahulu.
+
+2b. Jika Anda hanya ingin mendengarkan lagu, silakan pilih lagu yang Anda ingin dengarkan dari daftar lagu yang tersedia.
+
+3a. Jika Anda sudah login, silakan klik tombol "Unggah Lagu" untuk mengunggah lagu ke situs web kami.
+
+3b. Jika Anda belum login, silakan login terlebih dahulu untuk mengakses fitur "Unggah Lagu".
+
+Setelah mengunggah lagu, Anda dapat memasukkan tautan ke layanan streaming seperti Spotify atau Joox untuk memutar lagu.
+
+Selain itu, Anda juga dapat mengedit informasi lagu seperti judul, artis, album, dan deskripsi.
+
+Jika Anda ingin menghapus lagu yang telah diunggah, silakan masuk ke halaman "Profil" dan pilih lagu yang ingin dihapus.
+
+Terima kasih telah menggunakan Music Publishing App. Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau masukan.
